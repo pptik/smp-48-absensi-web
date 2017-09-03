@@ -1,0 +1,77 @@
+{"server_error":{
+  "success": false,
+  "message": "Server tidak merespon, silahkan coba beberapa saat lagi"
+  },
+  "invalid_session":{
+    "success": false,
+    "message": "Kode sesi tidak sesuai atau sudah tidak berlaku"
+  },
+  "not_admin_access":{
+    "success": false,
+    "message": "Akses tidak bisa diberikan karena anda bukan admin"
+  },
+  "email_already_subscribe":{
+    "success": false,
+    "message": "Email Sudah Pernah Disubscribe"
+  },
+  "email_already_use":{
+    "success": false,
+    "message": "Email telah digunakan"
+  },
+  "parameter_not_completed":{
+    "success": false,
+    "message": "Parameter tidak lengkap"
+  },
+  "phone_already_use":{
+    "success": false,
+    "message": "Nomor telah digunakan"
+  },
+  "username_already_use":{
+    "success": false,
+    "message": "Username telah digunakan"
+  },
+  "not_admin":{
+    "success": false,
+    "message": "Maaf tidak bisa login, User bukan admin"
+  },
+  "invalid_password":{
+    "success": false,
+    "message": "Password yang anda masukan salah"
+  },
+  "account_not_approved":{
+    "success": false,
+    "message": "Akun anda belum di Approve Admin, silahkan hubungi admin Privatq"
+  },
+  "email_or_password_invalid":{
+    "success": false,
+    "message": "Email atau password yang Anda masukkan salah"
+  },
+  "bukan_siswa":{
+    "success": false,
+    "message": "Anda tidak terdaftar sebagai siswa"
+  },
+  "user_not_found":{
+    "success": false,
+    "message": "Pengguna tidak ditemukan"
+  },
+  "account_created":{
+    "success": true,
+    "messages": "Berhasil membuat akun"
+  },
+  "request_success":{
+    "success": true,
+    "message": "Berhasil memuat permintaan"
+  },
+  "already_sent_request":{
+    "success":false,
+    "message": "Anda telah mengirimkan permintaan pertemanan sebelumnya"
+  },
+  "relation_not_found":{
+    "success": false,
+    "message": "Relasi tidak ditemukan"
+  },
+  "gps_tracker_already_register":{
+    "success": false,
+    "message": "GPS Tracker sudah terdaftar sebelumnya"
+  }
+}

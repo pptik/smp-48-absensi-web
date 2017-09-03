@@ -1,0 +1,31 @@
+{
+  "name": "absensi-SMP-48",
+  "version": "1.0.0",
+  "description": "website absensi SMP 48",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www"
+  },
+  "author": "edo",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.1",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.3",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-flash": "git://github.com/RGBboy/express-flash.git",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.5",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.30",
+    "morgan": "~1.8.1",
+    "semantic-ui": "^2.2.13",
+    "serve-favicon": "~2.4.2"
+  }
+}

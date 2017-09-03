@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Absensi</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <link href="/dist/semantic.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="/assets/images/absensi.png"/>
+  <style>
+    .centertext{
+      height: 500px;
+      line-height: 500px;
+      text-align: center;
+    }
+    .spancenteredtext {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+    }
+  </style>
+</head>
+<body style="height: 100%">
+<script type="text/javascript" src="/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/dist/semantic.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+<link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+<meta charset="utf-8">
+<meta name="_token" content="{{ csrf_token() }}">
+<div class="ui container" style="width: 100% ;height: 100%;padding-left:5%;padding-right: 5% ">
+  <div class="ui secondary pointing menu" style="padding: 5px" >
+
+    <div class="left menu">
+      <a class="item" href="/">
+        Home
+      </a>
+      <a class="active item">
+        Absensi
+      </a>
+    </div>
+    <div class="right menu">
+      <a class="item" href="/login">Login</a>
+    </div>
+  </div>
+  <div class="ui secondary pointing menu" style="padding: 5px" >
+    <div class="left menu">
+      <a class="item" href="/absensilist">
+        Manual
+      </a>
+      <a class="active item">
+        Realtime
+      </a>
+    </div>
+
+  </div>
+  <div class="ui container" style="margin-top: 5%">
+
+    <div  class="ui grid" >
+
+    <table class="ui celled padded table" id="TabelJadwal">
+
+    </table>
+  </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+
+        function LoadTabelJadwal(Data) {
+            $("#TabelJadwal tr").remove();
+            var table = document.getElementById("TabelJadwal");
+            var thead, tr, td;
+            table.appendChild(thead = document.createElement("thead"));
+            thead.appendChild(tr = document.createElement("tr"));
+            tr.appendChild(td = document.createElement("td"));
+            td.innerHTML = "No";
+            tr.appendChild(td = document.createElement("td"));
+            td.innerHTML = "Mac Scanner";
+            tr.appendChild(td = document.createElement("td"));
+            td.innerHTML = "RFID";
+            tr.appendChild(td = document.createElement("td"));
+            td.innerHTML = "Date";
+            tr.appendChild(td = document.createElement("td"));
+            td.innerHTML = "Time";
+            var count=1;
+            if(Data.length>0){
+
+                for (var j=0;j<Data.length;j++){
+                    tr = document.createElement("tr");
+                    tr.setAttribute("id", "row" + i);
+                    if (i%2 == 0)
+                    {
+                        tr.setAttribute("style", "background:white");
+                    }
+                    table.appendChild(tr);
+                    tr.appendChild(td = document.createElement("td"));
+                    td.innerHTML =count;
+                    tr.appendChild(td = document.createElement("td"));
+                    td.innerHTML =Data[i].mac;
+                    tr.appendChild(td = document.createElement("td"));
+                    td.innerHTML =Data[i].rf_id;
+                    tr.appendChild(td = document.createElement("td"));
+                    td.innerHTML =Data[i].tanggal;
+                    tr.appendChild(td = document.createElement("td"));
+                    td.innerHTML =Data[i].waktu;
+                    count++;
+                }
+            }
+        }
+
+
+    });
+
+
+</script>
+</body>
+</html>

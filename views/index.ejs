@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Absensi</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <link href="/dist/semantic.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="/assets/images/absensi.png"/>
+  <style>
+    .centertext{
+      height: 500px;
+      line-height: 500px;
+      text-align: center;
+    }
+    .spancenteredtext {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+    }
+  </style>
+</head>
+<body style="height: 100%">
+<script type="text/javascript" src="/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/dist/semantic.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<meta charset="utf-8">
+<meta name="_token" content="{{ csrf_token() }}">
+<div class="ui container" style="width: 100% ;height: 100%;padding-left:5%;padding-right: 5% ">
+  <div class="ui secondary pointing menu" style="padding: 5px" >
+
+    <div class="left menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item" href="/absensilist">
+        Absensi
+      </a>
+    </div>
+    <div class="right menu">
+      <a class="item" href="/login">Login</a>
+    </div>
+  </div>
+  <div class="ui container" style="background: #99b9ff;width: 100%;height: 100%; color: white">
+    <div class="centertext">
+      <div class="spancenteredtext">
+        <img src="/assets/image/absensi.png">
+
+        <h1>"Selamat Datang Di Website Absensi SMP 48"</h1>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+    });
+
+
+</script>
+</body>
+</html>

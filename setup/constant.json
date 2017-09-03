@@ -1,0 +1,10 @@
+{
+  "log_jenis_withdrawal": "Withdrawal Qpay",
+  "log_id_jenis_withdrawal": 0,
+  "log_jenis_topup": "Top Up Qpay",
+  "log_id_jenis_topup": 1,
+  "log_jenis_pengurangan": "Pengurangan Qpay",
+  "log_id_jenis_pengurangan": 2,
+  "log_jenis_penambahan": "Penambahan Qpay",
+  "log_id_jenis_penambahan": 3
+}
