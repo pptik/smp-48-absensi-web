@@ -213,8 +213,8 @@
 
                 for (var j=0;j<Data.length;j++){
                     tr = document.createElement("tr");
-                    tr.setAttribute("id", "row" + i);
-                    if (i%2 == 0)
+                    tr.setAttribute("id", "row" + j);
+                    if (j%2 == 0)
                     {
                         tr.setAttribute("style", "background:white");
                     }
@@ -222,13 +222,13 @@
                     tr.appendChild(td = document.createElement("td"));
                     td.innerHTML =count;
                     tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[i].mac;
+                    td.innerHTML =Data[j].mac;
                     tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[i].rf_id;
+                    td.innerHTML =Data[j].rf_id;
                     tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[i].tanggal;
+                    td.innerHTML =Data[j].tanggal;
                     tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[i].waktu;
+                    td.innerHTML =Data[j].waktu;
                     count++;
                 }
             }

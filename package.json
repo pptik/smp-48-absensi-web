@@ -25,7 +25,9 @@
     "moment": "^2.18.1",
     "mongodb": "^2.2.30",
     "morgan": "~1.8.1",
+    "request": "^2.81.0",
     "semantic-ui": "^2.2.13",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "socket.io": "^2.0.3"
   }
 }

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-
+const rmq_config = require('../setup/rmq.json');
+let rmq = require('amqplib');
 /* GET home page. */
 router.get('/', async(req, res) => {
     let Session=req.session;
@@ -44,7 +45,7 @@ router.get('/realtime', function(req, res, next) {
     if(Session.ID!=null){
         switch (parseInt(Session.RoleID)){
             case 0:
-                res.render('authenticated/dashboard-admin', { title: 'Absensi' });
+                res.render('authenticated/dashboard-admin', { title: 'Absensi',rmq_config:rmq_config,rmq:rmq });
                 break
         }
     }else{

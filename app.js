@@ -11,6 +11,7 @@ var http = require('http');
 var flash = require('express-flash')
 
 var app = express();
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -51,6 +52,7 @@ database.connect(function (err, db) {
         server.listen(port);
         server.on('error', onError);
         server.on('listening', onListening);
+        var io = require('socket.io').listen(server);
         function normalizePort(val) {
             var port = parseInt(val, 10);
             if (isNaN(port)) {
@@ -93,8 +95,17 @@ database.connect(function (err, db) {
             debug('Listening on ' + bind);
         }
 
+        io.on('connection', function(socket){
+            console.log('a user connected');
+            socket.on('disconnect', function(){
+                console.log('user disconnected');
+            });
+        });
+        app.io = io;
         app.db = db;
         module.exports = app;
+        const rmqConnection = require('./rmq/connection');
+        rmqConnection.connect();
         var index = require('./routes/index');
         var users = require('./routes/users');
         var absensi = require('./routes/absensi');
