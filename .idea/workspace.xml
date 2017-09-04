@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7525ed40-3458-4ba5-94e9-710f5b8b497e" name="Default" comment="Opening ACT">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/website-absensi-sma48.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/socket.io/socket.io.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/socket.io/socket.io.slim.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rmq/absensi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rmq/connection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/absensi_model.js" afterPath="$PROJECT_DIR$/model/absensi_model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/absensi.js" afterPath="$PROJECT_DIR$/routes/absensi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/absensiview.ejs" afterPath="$PROJECT_DIR$/views/absensiview.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/realtime-absensi.ejs" afterPath="$PROJECT_DIR$/views/realtime-absensi.ejs" />
+    <list default="true" id="7525ed40-3458-4ba5-94e9-710f5b8b497e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/www" afterPath="$PROJECT_DIR$/bin/www" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,16 +32,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
               <caret line="120" column="22" lean-forward="false" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="20" column="9" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="20" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -102,11 +77,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="absensi_model.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="absensi_model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/absensi_model.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
               <caret line="144" column="40" lean-forward="false" selection-start-line="144" selection-start-column="40" selection-end-line="144" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="www" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/www">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.config" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web.config">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,16 +112,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
               <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rmq.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/rmq.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -183,6 +168,7 @@
         <option value="$PROJECT_DIR$/rmq/connection.js" />
         <option value="$PROJECT_DIR$/routes/absensi.js" />
         <option value="$PROJECT_DIR$/model/absensi_model.js" />
+        <option value="$PROJECT_DIR$/bin/www" />
       </list>
     </option>
   </component>
@@ -232,6 +218,11 @@
             <path>
               <item name="website-absensi-SMP48" type="b2602c69:ProjectViewProjectNode" />
               <item name="website-absensi-SMP48" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="website-absensi-SMP48" type="b2602c69:ProjectViewProjectNode" />
+              <item name="website-absensi-SMP48" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="website-absensi-SMP48" type="b2602c69:ProjectViewProjectNode" />
@@ -341,7 +332,7 @@
       <workItem from="1504153860769" duration="2037000" />
       <workItem from="1504161914709" duration="238000" />
       <workItem from="1504410251427" duration="32754000" />
-      <workItem from="1504491813071" duration="7008000" />
+      <workItem from="1504491813071" duration="7741000" />
     </task>
     <task id="LOCAL-00001" summary="Opening ACT">
       <created>1504425663192</created>
@@ -350,11 +341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504425663192</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Realtime Absensi">
+      <created>1504499060412</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1504499060412</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42037000" />
+    <option name="totallyTimeSpent" value="42770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -386,7 +384,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Opening ACT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Opening ACT" />
+    <MESSAGE value="Realtime Absensi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Realtime Absensi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -655,6 +654,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="144" column="40" lean-forward="false" selection-start-line="144" selection-start-column="40" selection-end-line="144" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
