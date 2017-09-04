@@ -1,0 +1,3 @@
+Connected to server
+[0mGET / [32m200 [0m25.667 ms - 1711[0m
+Service consume on : absensi.service.*

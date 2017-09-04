@@ -1,0 +1,5 @@
+Connected to server
+[0mGET /assets/images/absensi.png [33m404 [0m19.634 ms - 1901[0m
+Service consume on : absensi.service.*
+[0mGET /assets/images/absensi.png [33m404 [0m2.112 ms - 1901[0m
+[0mGET /favicon.ico [33m404 [0m1.840 ms - 1901[0m

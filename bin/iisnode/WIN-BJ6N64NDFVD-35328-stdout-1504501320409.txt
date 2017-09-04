@@ -1,0 +1,2 @@
+Connected to server
+Service consume on : absensi.service.*
