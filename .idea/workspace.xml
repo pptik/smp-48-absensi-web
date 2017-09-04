@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="realtime-absensi.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="realtime-absensi.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/realtime-absensi.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3475">
-              <caret line="139" column="32" lean-forward="false" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
+            <state relative-caret-position="88">
+              <caret line="139" column="45" lean-forward="false" selection-start-line="139" selection-start-column="45" selection-end-line="139" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -47,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configs.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="configs.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup/configs.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
@@ -169,11 +169,11 @@
         <option value="$PROJECT_DIR$/web.config" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
-        <option value="$PROJECT_DIR$/views/realtime-absensi.ejs" />
         <option value="$PROJECT_DIR$/routes/absensi.js" />
         <option value="$PROJECT_DIR$/rmq/connection.js" />
         <option value="$PROJECT_DIR$/setup/configs.json" />
         <option value="$PROJECT_DIR$/setup/rmq.json" />
+        <option value="$PROJECT_DIR$/views/realtime-absensi.ejs" />
       </list>
     </option>
   </component>
@@ -317,7 +317,7 @@
       <workItem from="1504161914709" duration="238000" />
       <workItem from="1504410251427" duration="32754000" />
       <workItem from="1504491813071" duration="16889000" />
-      <workItem from="1504533004035" duration="3092000" />
+      <workItem from="1504533004035" duration="3338000" />
     </task>
     <task id="LOCAL-00001" summary="Opening ACT">
       <created>1504425663192</created>
@@ -368,11 +368,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504517168099</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="rmq">
+      <created>1504536342592</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1504536342593</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55010000" />
+    <option name="totallyTimeSpent" value="55256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -709,14 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/realtime-absensi.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3475">
-          <caret line="139" column="32" lean-forward="false" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/absensi.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
@@ -753,6 +752,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/realtime-absensi.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="139" column="45" lean-forward="false" selection-start-line="139" selection-start-column="45" selection-end-line="139" selection-end-column="45" />
           <folding />
         </state>
       </provider>
