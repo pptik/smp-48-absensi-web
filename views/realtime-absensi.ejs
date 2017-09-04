@@ -137,7 +137,7 @@
             td.innerHTML =Data.waktu;
             count++;
         }
-        let socket = io('http://167.205.7.226:8011');
+        let socket = io('http://localhost:8011');
         socket.on('absensi', function(msg){
             console.log(msg);
             LoadDataFromMassage(msg);
