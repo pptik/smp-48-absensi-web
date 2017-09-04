@@ -28,7 +28,7 @@ consume = async (connection) => {
             console.log("Incoming msg : "+msg.content.toString());
             /** update angkot location**/
             console.log(msg.fields.routingKey)
-            if(msg.fields.routingKey === rmq_config.service_queue_name){
+            if(msg.fields.routingKey === rmq_config.route_update_absensi){
                 let query = JSON.parse(msg.content.toString());
                 console.log("-------------------------------------------------");
                 console.log('Insert Absensi');
