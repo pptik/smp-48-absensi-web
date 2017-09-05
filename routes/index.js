@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const rmq_config = require('../setup/rmq.json');
+const config=require('../setup/configs.json');
 let rmq = require('amqplib');
 /* GET home page. */
 router.get('/', async(req, res) => {
@@ -49,7 +50,7 @@ router.get('/realtime', function(req, res, next) {
                 break
         }
     }else{
-        res.render('realtime-absensi', { title: 'Absensi' });
+        res.render('realtime-absensi', { title: 'Absensi',URL_Service:config.URL_SERVICE });
     }
 });
 
