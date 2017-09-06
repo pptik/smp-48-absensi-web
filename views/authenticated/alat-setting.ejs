@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Absensi</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <link href="/dist/semantic.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="/assets/images/absensi.png"/>
+  <style>
+
+  </style>
+</head>
+<body style="height: 100%">
+<script type="text/javascript" src="/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/dist/semantic.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+
+<meta charset="utf-8">
+<div class="ui modal small" id="editDataModal" style="width: 50% ">
+  <i class="close icon"></i>
+  <div class="header">
+    Edit Data
+  </div>
+  <div class="editTataModalBody" style="margin: 7px">
+    <form class="ui form" method="post" action="/absensi/update-mac">
+    <input type="hidden" name="_id" id="_id"/>
+    <div class="ui grid">
+      <div class="four wide column">
+        <div class="field">
+          <label>Mac</label>
+          <input type="Username" name="MacID" id="MacID" readonly>
+        </div>
+        <div class="field">
+          <label>Kode Ruangan</label>
+          <input type="Username" name="KodeRuangan" id="KodeRuangan">
+        </div>
+        <div class="field">
+          <label>Nama Ruangan</label>
+          <input type="Username" name="NamaRuangan" id="NamaRuangan">
+        </div>
+      </div>
+
+    </div>
+      <div class="field">
+        <br>
+        <input type="submit" value="Submit" class="ui button blue">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="ui modal small" id="deleteDataForm" style="width: 30% ">
+  <i class="close icon"></i>
+  <div class="header">
+    Delete Data
+  </div>
+  <div class="deleteDataFormBody" style="margin: 7px " >
+    <form class="ui form" method="post" action="/absensi/delete-mac">
+    <input type="hidden" name="_id" id="_id"/>
+    <div class="ui grid">
+      <div class="ten wide column">
+        <div class="field">
+          <label >Masukkan Password Admin</label>
+          <input type="Password" name="Password" id="Password">
+        </div>
+      </div>
+
+    </div>
+      <div class="field">
+        <br>
+        <input type="submit" value="Submit" class="ui button blue">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="ui container" style="width: 100% ;height: 100%;padding-left:5%;padding-right: 5% ">
+  <div class="ui secondary pointing menu" style="padding: 5px" >
+
+    <div class="left menu">
+      <a class=" item" href="/">
+        Absensi
+      </a>
+      <a class="item" href="/authenticated-data-siswa">
+        Data Siswa
+      </a>
+      <a class="active item">
+        Data Alat
+      </a>
+    </div>
+    <div class="right menu">
+      <a class="item" href="users/logout/action">Logout</a>
+    </div>
+  </div>
+  <div class="ui container">
+      <%if (messages.pesan) { %>
+    <div class="ui blue message">
+      <span ><%= messages.pesan %> </span>
+    </div>
+      <% } %>
+    <div id="containermac" name="containermac" class="ui form">
+
+    <table class="ui celled padded table" id="TabelAlat">
+
+    </table>
+  </div>
+
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        function loadDataMac() {
+            $.get('/absensi/list/mac', function(data) {
+                let listmac=data.listmac;
+                console.log(listmac);
+                LoadTabelJadwal(listmac);
+            });
+        }
+        loadDataMac()
+        function LoadTabelJadwal(Data) {
+            $("#TabelJadwal tr").remove();
+            var table = document.getElementById("TabelAlat");
+            var thead, tr, td;
+            table.appendChild(thead = document.createElement("thead"));
+            thead.appendChild(tr = document.createElement("tr"));
+            tr.appendChild(td = document.createElement("td"));
+            td.innerHTML = "No";
+            tr.appendChild(td = document.createElement("td"));
+            td.innerHTML = "Mac ID";
+            tr.appendChild(td = document.createElement("td"));
+            td.innerHTML = "Kode Ruangan";
+            tr.appendChild(td = document.createElement("td"));
+            td.innerHTML = "Nama Ruangan";
+            tr.appendChild(td = document.createElement("td"));
+            td.innerHTML = "Aksi";
+            var count=1;
+            var btn=new Array();
+            var editBtn=new Array();
+            if(Data.length>0){
+
+                for (var j=0;j<Data.length;j++){
+                    tr = document.createElement("tr");
+                    tr.setAttribute("id", "row" + j);
+                    if (j%2 == 0)
+                    {
+                        tr.setAttribute("style", "background:white");
+                    }
+                    table.appendChild(tr);
+                    tr.appendChild(td = document.createElement("td"));
+                    td.innerHTML =count;
+                    tr.appendChild(td = document.createElement("td"));
+                    td.innerHTML =Data[j].mac;
+                    tr.appendChild(td = document.createElement("td"));
+                    td.innerHTML =Data[j].koderuangan;
+                    tr.appendChild(td = document.createElement("td"));
+                    td.innerHTML =Data[j].namaruangan;
+
+                    tr.appendChild(td = document.createElement("td"));
+                    btn[j] = document.createElement('input');
+                    btn[j].type = "button";
+                    btn[j].id = "button"+j;
+                    btn[j].name = "button"+j;
+                    btn[j].className = "ui red button";
+                    btn[j].value = "delete";
+                    btn[j].nama=Data[j].Nama;
+                    btn[j]._id=Data[j]._id;
+                    btn[j].data=Data[j];
+
+                    td.appendChild(btn[j]);
+                    $("#button"+j+"").click(function () {
+                        deleteFormOpen($(this).prop("data"));
+                    });
+                    tr.appendChild(td = document.createElement("td"));
+                    editBtn[j] = document.createElement('input');
+                    editBtn[j].type = "button";
+                    editBtn[j].id = "ebutton"+j;
+                    editBtn[j].name = "ebutton"+j;
+                    editBtn[j].className = "ui blue button";
+                    editBtn[j].value = "update";
+                    editBtn[j].nama=Data[j].Nama;
+                    editBtn[j]._id=Data[j]._id;
+                    editBtn[j].data=Data[j] ;
+                    td.appendChild(editBtn[j]);
+                    $("#ebutton"+j+"").click(function () {
+                        editFormOpen($(this).prop("data"));
+                    });
+                    count++;
+                }
+            }
+        }
+        function deleteFormOpen(data) {
+            $(".deleteDataFormBody #_id").val(data._id);
+            $('#deleteDataForm').modal('show');
+        }
+        function editFormOpen(data) {
+            $(".editTataModalBody #_id").val(data._id);
+            $(".editTataModalBody #MacID").val(data.mac);
+            $(".editTataModalBody #KodeRuangan").val(data.koderuangan);
+            $(".editTataModalBody #NamaRuangan").val(data.namaruangan);
+            $('#editDataModal').modal('show');
+        }
+    });
+
+
+</script>
+</body>
+</html>

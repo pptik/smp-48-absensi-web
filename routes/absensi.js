@@ -48,7 +48,7 @@ router.post('/insert', async(req, res) => {
             if(MacInCollection.length>0){
                 await absensiModel.insertAbsensi(query);
                 req.app.io.emit('absensi', query);
-                res.status(200).send({success: true, message: "Data Berhasil Dikirim"});
+                    res.status(200).send({success: true, message: "Data Berhasil Dikirim"});
             }else {
                 await absensiModel.insertToListMac(query.mac);
                 await absensiModel.insertAbsensi(query);
@@ -58,6 +58,64 @@ router.post('/insert', async(req, res) => {
         }catch (err){
             console.log(err);
             res.status(200).send({success: false, message: "Data Gagal Diambil"});
+        }
+    }
+
+});
+router.post('/update-mac', async(req, res) => {
+    let query=req.body;
+    console.log(query);
+    if (query.MacID===undefined||query.KodeRuangan===undefined||query.NamaRuangan===undefined){
+        req.flash('pesan', "Silahkan Lengkapi Data");
+        res.redirect('/authenticated-alat-setting');
+    }
+    else {
+        try{
+            await absensiModel.updateDataMacList(query);
+            req.flash('pesan', "Berhasil Mengubah Data");
+            res.redirect('/authenticated-alat-setting');
+        }catch (err){
+            console.log(err);
+            req.flash('pesan', "Gagal Merubah Data");
+            res.redirect('/authenticated-alat-setting');
+        }
+    }
+
+});
+router.post('/delete-mac', async(req, res) => {
+    let query=req.body;
+    console.log(query);
+    if (query.Password===undefined||query._id===undefined){
+        req.flash('pesan', "Silahkan Lengkapi Data");
+        res.redirect('/authenticated-alat-setting');
+    }
+    else {
+        try{
+            let checkadmin= await userModel.checkIfAdmin(req.session._id);
+            if(checkadmin){
+                let passwordFromDb=checkadmin.Password;
+                if(passwordFromDb!==undefined){
+                    if(bcyrpt.compareSync(query.Password,passwordFromDb)){
+                        await absensiModel.deleteMacFromMacListDocument(query._id);
+                        req.flash('pesan', "Berhasil Menghapus data");
+                        res.redirect('/authenticated-alat-setting');
+                    }else {
+                        req.flash('pesan', "Password Salah");
+                        res.redirect('/authenticated-alat-setting');
+                    }
+                }else {
+                    req.flash('pesan', "Akun Belum Aktif");
+                    res.redirect('/authenticated-alat-setting');
+                }
+            }else {
+                req.flash('pesan', "Gagal Meghapus Data");
+                res.redirect('/authenticated-alat-setting');
+            }
+
+        }catch (err){
+            console.log(err);
+            req.flash('pesan', "Gagal Meghapus Data");
+            res.redirect('/authenticated-alat-setting');
         }
     }
 

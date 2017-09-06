@@ -83,7 +83,31 @@ getListAbsenToday = () => {
         });
     });
 };
-
+updateDataMacList=(query)=>{
+  return new Promise((resolve,reject)=>{
+      macCollection.updateOne({_id: ObjectId(query._id)},{ $set:
+          {
+              kelasassigned:true,
+              koderuangan:query.KodeRuangan,
+              namaruangan:query.NamaRuangan
+          }
+      }, function(err, result) {
+          if(err){
+              reject(err);
+          }else {
+              resolve(result);
+          }
+      });
+  });
+};
+deleteMacFromMacListDocument=(MacID)=>{
+  return new Promise((resolve,reject)=>{
+      macCollection.removeOne({_id:ObjectId(MacID)},function (err,result) {
+         if(err)reject(err);
+         else resolve(result);
+      });
+  }) ;
+};
 function getListAbsenTodayByMacID(MacID,callback) {
     var today = new Date();
     today.setHours(0,0,0,0);
@@ -161,5 +185,7 @@ module.exports = {
     findMacByMacID:findMacByMacID,
     insertToListMac:insertToListMac,
     insertAbsensi:insertAbsensi,
-    getListAbsenToday:getListAbsenToday
+    getListAbsenToday:getListAbsenToday,
+    updateDataMacList:updateDataMacList,
+    deleteMacFromMacListDocument:deleteMacFromMacListDocument
 };

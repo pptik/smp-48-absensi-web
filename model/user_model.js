@@ -21,6 +21,73 @@ updatePasswordAdmin=(Password)=>{
       });
   });
 };
+checkLoginUser=(query)=>{
+    return new Promise((resolve,reject)=>{
+        var Username = new RegExp(["^", query.Entity, "$"].join(""), "i");
+        var NoInduk=query.Entity;
+       userCollection.findOne({
+         $or:[
+             {Username:Username},
+             {no_induk:NoInduk}
+         ]
+       },function (err,result) {
+           if(err)reject(err);
+           else {
+               if (result){
+                   resolve(result);
+               }else {
+                   resolve(false);
+               }
+           }
+       });
+    });
+};
+checkIfAdmin=(IDUser)=>{
+    return new Promise((resolve,reject)=>{
+        userCollection.findOne({
+             _id:ObjectId(IDUser)
+       },function (err,result) {
+           if(err)reject(err);
+           else {
+               if (result){
+                   if(result.RoleID===0){
+                       resolve(result);
+                   }else {
+                       resolve(false);
+                   }
+               }else {
+                   resolve(false);
+               }
+           }
+       });
+    });
+};
+getListSiswa = () => {
+    return new Promise((resolve, reject)=>{
+        userCollection.find({RoleID:2}).toArray( (err, results) => {
+            if(err)reject(err);
+            else resolve(results);
+        });
+    });
+};
+findUserByString = (SearchString) => {
+    return new Promise((resolve, reject)=>{
+        console.log(SearchString);
+        userCollection.find({
+            RoleID:2,
+            $text:{
+                $search:SearchString
+            }
+        }).toArray( (err, results) => {
+            if(err)reject(err);
+            else resolve(results);
+        });
+    });
+};
 module.exports = {
-updatePasswordAdmin:updatePasswordAdmin
+    updatePasswordAdmin:updatePasswordAdmin,
+    checkLoginUser:checkLoginUser,
+    getListSiswa:getListSiswa,
+    findUserByString:findUserByString,
+    checkIfAdmin:checkIfAdmin
 };

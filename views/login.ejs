@@ -55,7 +55,7 @@
     <div class="ui one column center aligned grid" id="loginform">
       <div class="column six wide form-holder">
         <h2 class="center aligned header form-head">Sign in</h2>
-        <form class="ui form" method="post" action="/users/updatepasswordadmin">
+        <form class="ui form" method="post" action="/users/login/action">
           <div class="ui form">
               <%if (messages.pesan) { %>
             <div class="ui red message">
@@ -63,7 +63,7 @@
             </div>
               <% } %>
             <div class="field">
-              <input type="text" placeholder="Username" name="Username">
+              <input type="text" placeholder="Username atau Nomor Induk" name="Entity">
             </div>
             <div class="field">
               <input type="password" placeholder="Password" name="Password">

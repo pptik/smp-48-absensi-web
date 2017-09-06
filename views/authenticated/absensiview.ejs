@@ -6,37 +6,26 @@
   <link href="/dist/semantic.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="/assets/images/absensi.png"/>
   <style>
-    container-body {
-      background: url('https://www.planwallpaper.com/static/images/i-should-buy-a-boat.jpg') fixed;
-      background-size: cover;
-      padding: 0;
-      margin: 0;
+    .centertext{
+      height: 500px;
+      line-height: 500px;
+      text-align: center;
     }
-
-    .form-holder {
-      background: rgba(255,255,255,0.2);
-      margin-top: 10%;
-      border-radius: 3px;
+    .spancenteredtext {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
     }
-
-
-
-    .remember-me {
-      text-align: left;
-    }
-    .ui.checkbox label {
-      color: #ddd;
-    }
-
   </style>
 </head>
 <body style="height: 100%">
 <script type="text/javascript" src="/dist/jquery.min.js"></script>
 <script type="text/javascript" src="/dist/semantic.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+<link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
-
 <meta charset="utf-8">
 <meta name="_token" content="{{ csrf_token() }}">
 <div class="ui container" style="width: 100% ;height: 100%;padding-left:5%;padding-right: 5% ">
@@ -54,18 +43,19 @@
       </a>
     </div>
     <div class="right menu">
-      <a class="item" href="users/logout/action">Logout</a>
+      <a class="item" href="/login">Login</a>
     </div>
   </div>
   <div class="ui secondary pointing menu" style="padding: 5px" >
     <div class="left menu">
-      <a class="active item" >
+      <a class="active item">
         Manual
       </a>
-      <a class="item" href="/authenticated-realtime">
+      <a class="item" href="/realtime" >
         Realtime
       </a>
     </div>
+
   </div>
   <div class="ui container">
     <div id="containermac" name="containermac" class="ui form">
@@ -118,7 +108,7 @@
     </table>
   </div>
 
-</div>
+  </div>
 
 
 <script type="text/javascript">
@@ -183,16 +173,16 @@
             select.className="ui fluid search dropdown";
             select.setAttribute("id", "selectcontainer");
 
-            $.get('/absensi/list/mac', function(data) {
+             $.get('/absensi/list/mac', function(data) {
                 let listmac=data.listmac;
                 deviceidawal=listmac[0].mac;
                 for(i=0 ; i<listmac.length ; i++){
                     select.options.add( new Option(listmac[i].koderuangan,listmac[i].mac) );
                 }
-                loaddataawal();
-                frag.appendChild(select);
-                div.appendChild(frag);
-                //div.onchange=onclick_search;
+                 loaddataawal();
+                 frag.appendChild(select);
+                 div.appendChild(frag);
+                 //div.onchange=onclick_search;
             });
 
         }
@@ -257,7 +247,7 @@
                     function(data) {
                         LoadTabelJadwal(data.list)
                     }
-                );
+            );
             }else{
                 var starttime=new Date(tanggal+" "+jamawal).toISOString();
                 var endtime=new Date(tanggal+" "+jamakhir).toISOString();
@@ -267,7 +257,7 @@
                         LoadTabelJadwal(data.list)
 
                     }
-                );
+            );
             }
 
 
