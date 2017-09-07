@@ -12,6 +12,7 @@
 <body style="height: 100%">
 <script type="text/javascript" src="/dist/jquery.min.js"></script>
 <script type="text/javascript" src="/dist/semantic.js"></script>
+<script src="/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
@@ -49,6 +50,43 @@
 
     </div>
       <div class="field">
+        <br>
+        <input type="submit" value="Submit" class="ui button blue">
+      </div>
+    </form>
+  </div>
+
+
+</div>
+<div class="ui modal small" id="tambahRFIDSiswaForm" style="width: 50% ">
+  <i class="close icon"></i>
+  <div class="header">
+    Tambah RFID Siswa
+  </div>
+  <div class="tambahRFIDSiswaFormModalBody" style="margin: 7px">
+    <form class="ui form" method="post" action="/users/insert/rfid">
+    <div class="ui grid">
+      <input type="hidden" name="_id" id="_id"/>
+      <div class="ui container">
+        <br>
+        <br>
+        <label style="color: #1a69a4">Nama Siswa</label>
+        <h4 id="NamaUserLabel"></h4>
+        <label style="color: #1a69a4" >Nomor Induk Siswa</label>
+        <h4 id="NoIndukLabel"></h4>
+        <div id="containermac" name="containermac" class="ui form">
+          <h3 style="color: #1a69a4">Pilih Device, Lalu Tap Kartu Yang ingin ditambahkan ke User</h3>
+        </div>
+        <div class="field">
+          <br>
+          <h3 style="color: #1a69a4">RFID</h3>
+          <input type="Username" name="RFID" id="RFID" readonly>
+        </div>
+      </div>
+
+    </div>
+      <div class="field">
+        <br>
         <br>
         <input type="submit" value="Submit" class="ui button blue">
       </div>
@@ -108,7 +146,20 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
+        let socket = io( "<%=URL_Service%>" );
+        socket.on('absensi', function(msg){
+            console.log(msg);
+            loadRFIDFromMessage(msg);
+        });
+        function loadRFIDFromMessage(msg) {
+            console.log(msg);
+            var e = document.getElementById("selectcontainer");
+            var deviceid = e.options[e.selectedIndex].value;
+            if(deviceid===msg.mac){
+                $(".tambahRFIDSiswaFormModalBody #RFID").val(msg.rf_id);
+            }
 
+        }
         function loadDataMac() {
             $.get('/users/list/siswa', function(data) {
                 let listsiswa=data.listsiswa;
@@ -132,6 +183,8 @@
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "Jenis Kelamin";
             tr.appendChild(td = document.createElement("td"));
+            td.innerHTML = "RF_ID";
+            tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "Aksi";
             var count=1;
             var btn=new Array();
@@ -154,6 +207,21 @@
                     td.innerHTML =Data[j].nama;
                     tr.appendChild(td = document.createElement("td"));
                     td.innerHTML =Data[j].jenis_kelamin;
+                    tr.appendChild(td = document.createElement("td"));
+                    if(Data[j].rf_id!==undefined){
+                        let rfidArray=Data[j].rf_id;
+                        let rfidName=""
+                        for (let h=0;h<rfidArray.length;h++){
+                            if(h===rfidArray.length-1){
+                                rfidName=rfidName+rfidArray[h]+".";
+                            }else {
+                                rfidName=rfidName+rfidArray[h]+"; ";
+                            }
+                        }
+                        td.innerHTML =rfidName;
+                    }else {
+                        td.innerHTML ="";
+                    }
 
                     tr.appendChild(td = document.createElement("td"));
                     btn[j] = document.createElement('input');
@@ -175,27 +243,44 @@
                     editBtn[j].id = "ebutton"+j;
                     editBtn[j].name = "ebutton"+j;
                     editBtn[j].className = "ui blue button";
-                    editBtn[j].value = "update";
+                    editBtn[j].value = "RFID";
                     editBtn[j].nama=Data[j].Nama;
                     editBtn[j]._id=Data[j]._id;
                     editBtn[j].data=Data[j] ;
                     td.appendChild(editBtn[j]);
                     $("#ebutton"+j+"").click(function () {
-
+                        tambahRFIDSiswa($(this).prop("data"));
                     });
                     count++;
                 }
             }
         }
-        function editFormOpen(data) {
-            $(".editTataModalBody #_id").val(data._id);
-            $(".editTataModalBody #MacID").val(data.mac);
-            $(".editTataModalBody #KodeRuangan").val(data.koderuangan);
-            $(".editTataModalBody #NamaRuangan").val(data.namaruangan);
-            $('.ui.modal')
-                .modal('show')
-            ;
+        function tambahRFIDSiswa(data) {
+            $(".tambahRFIDSiswaFormModalBody #_id").val(data._id);
+            $(".tambahRFIDSiswaFormModalBody #NamaUserLabel").text(data.nama);
+            $(".tambahRFIDSiswaFormModalBody #NoIndukLabel").text(data.no_induk);
+            $('#tambahRFIDSiswaForm').modal('show');
         }
+        function loaddropdownmac() {
+            let div = document.querySelector("#containermac"),
+                frag = document.createDocumentFragment(),
+                select = document.createElement("select");
+            select.className="ui fluid search dropdown";
+            select.setAttribute("id", "selectcontainer");
+
+            $.get('/absensi/list/mac', function(data) {
+                let listmac=data.listmac;
+                deviceidawal=listmac[0].mac;
+                for(i=0 ; i<listmac.length ; i++){
+                    select.options.add( new Option(listmac[i].koderuangan,listmac[i].mac) );
+                }
+                frag.appendChild(select);
+                div.appendChild(frag);
+                //div.onchange=onclick_search;
+            });
+
+        }
+        loaddropdownmac();
         $('#searchStudent').keyup(function() {
             var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
             console.log(val);

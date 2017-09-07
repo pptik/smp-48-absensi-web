@@ -22,6 +22,21 @@ updatePasswordAdmin=(Password)=>{
       });
   });
 };
+updateRfidSiswa=(query)=>{
+  return new Promise((resolve,reject)=>{
+      userCollection.updateOne({_id: ObjectId(query._id)},
+          {
+              $push:{rf_id:query.RFID}
+          }
+      , function(err, result) {
+          if(err){
+              reject(err);
+          }else {
+              resolve(result);
+          }
+      });
+  });
+};
 checkLoginUser=(query)=>{
     return new Promise((resolve,reject)=>{
         var Username = new RegExp(["^", query.Entity, "$"].join(""), "i");
@@ -100,11 +115,24 @@ insertUserSiswa = (query) => {
         });
     });
 };
+checkRFID = (rf_id) => {
+    return new Promise((resolve, reject)=>{
+        userCollection.findOne({rf_id:rf_id},function (err,result) {
+            if(err)reject(err);
+            else {
+                if(result)resolve(true);
+                else resolve(false);
+            }
+        });
+    });
+};
 module.exports = {
     updatePasswordAdmin:updatePasswordAdmin,
     checkLoginUser:checkLoginUser,
     getListSiswa:getListSiswa,
     findUserByString:findUserByString,
     checkIfAdmin:checkIfAdmin,
-    insertUserSiswa:insertUserSiswa
+    insertUserSiswa:insertUserSiswa,
+    checkRFID:checkRFID,
+    updateRfidSiswa:updateRfidSiswa
 };

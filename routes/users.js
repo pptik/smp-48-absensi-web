@@ -90,6 +90,31 @@ router.post('/insert/siswa', async(req, res) => {
         }
     }
 });
+router.post('/insert/rfid', async(req, res) => {
+    let query=req.body;
+    console.log(query);
+    if(query.RFID===undefined||query._id===undefined||query.RFID===""){
+        req.flash('pesan', "Silahkan Masukan Kartu Yang Valid");
+        res.redirect('/authenticated-data-siswa');
+    }else {
+        try{
+            let checkRFID=await userModel.checkRFID(query.RFID);
+            if(!checkRFID){
+                await userModel.updateRfidSiswa(query);
+                req.flash('pesan', "Data Berhasil Ditambahkan");
+                res.redirect('/authenticated-data-siswa');
+            }else {
+                req.flash('pesan', "Kartu RFID Sudah digunakan user lain, silahkan coba kartu yang lain");
+                res.redirect('/authenticated-data-siswa');
+            }
+
+        }catch (err){
+            console.log(err);
+            req.flash('pesan', "Gagal Mengupdate Data");
+            res.redirect('/authenticated-data-siswa');
+        }
+    }
+});
 router.post('/search/siswa', async(req, res) => {
     console.log(req.body);
     try{
