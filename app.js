@@ -1,16 +1,18 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var database = require('./setup/database');
-var session = require('express-session');
-var debug = require('debug')('SMP48-absensi:website');
-var http = require('http');
-var flash = require('express-flash')
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const database = require('./setup/database');
+const configs = require('./setup/configs.json');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+const debug = require('debug')('SMP48-absensi:website');
+const http = require('http');
+const flash = require('express-flash')
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,6 +30,7 @@ app.use(session({
     secret: "absensiSMP48",
     resave: false,
     saveUninitialized: true,
+    store: new MongoStore({ url: configs.mongodb_uri }),
     cookie: { secure: !true }
 }));
 
