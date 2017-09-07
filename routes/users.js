@@ -42,7 +42,6 @@ router.post('/login/action', async(req, res) => {
                         sess.RoleID=checklogin.RoleID;
                         sess.Nama=checklogin.nama;
                         sess._id=checklogin._id;
-                        console.log(sess);
                         req.flash('pesan', "Berhasil Login");
                         res.redirect('/');
                     }else {

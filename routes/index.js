@@ -6,6 +6,7 @@ let rmq = require('amqplib');
 /* GET home page. */
 router.get('/', async(req, res) => {
     let Session=req.session;
+   console.log(Session._id);
     if(Session._id!==undefined){
         switch (parseInt(Session.RoleID)){
             case 0:
