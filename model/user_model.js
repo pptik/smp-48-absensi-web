@@ -3,6 +3,7 @@ const moment = require('moment');
 let database = app.db;
 let userCollection = database.collection('users');
 let bcyrpt=require('bcrypt-nodejs');
+let salt = bcyrpt.genSaltSync(10);
 let ObjectId = require('mongodb').ObjectID;
 
 updatePasswordAdmin=(Password)=>{
@@ -84,10 +85,26 @@ findUserByString = (SearchString) => {
         });
     });
 };
+insertUserSiswa = (query) => {
+    return new Promise((resolve, reject)=>{
+        let userQuery={
+            no_induk:query.NoInduk,
+            nama:query.Nama.toUpperCase(),
+            jenis_kelamin:query.JenisKelamin,
+            RoleID:2,
+            Password:bcyrpt.hashSync(query.Password, salt)
+        };
+        userCollection.insertOne(userQuery,function (err,result) {
+           if(err)reject(err);
+           else resolve(result);
+        });
+    });
+};
 module.exports = {
     updatePasswordAdmin:updatePasswordAdmin,
     checkLoginUser:checkLoginUser,
     getListSiswa:getListSiswa,
     findUserByString:findUserByString,
-    checkIfAdmin:checkIfAdmin
+    checkIfAdmin:checkIfAdmin,
+    insertUserSiswa:insertUserSiswa
 };

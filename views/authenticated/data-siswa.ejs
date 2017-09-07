@@ -17,27 +17,33 @@
 <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
 
 <meta charset="utf-8">
-<div class="ui modal small" id="editDataModal" style="width: 50% ">
+<div class="ui modal small" id="insertDataSiswaModal" style="width: 50% ">
   <i class="close icon"></i>
   <div class="header">
-    Edit Data
+    Insert Data Siswa
   </div>
-  <div class="editTataModalBody" style="margin: 7px">
-    <form class="ui form" method="post" action="/absensi/update-mac">
-    <input type="hidden" name="_id" id="_id"/>
+  <div class="insertDataSiswaModalBody" style="margin: 7px">
+    <form class="ui form" method="post" action="/users/insert/siswa">
     <div class="ui grid">
       <div class="four wide column">
         <div class="field">
-          <label>Mac</label>
-          <input type="Username" name="MacID" id="MacID" readonly>
+          <label>Nomor Induk</label>
+          <input type="Username" name="NoInduk" id="NoInduk">
         </div>
         <div class="field">
-          <label>Kode Ruangan</label>
-          <input type="Username" name="KodeRuangan" id="KodeRuangan">
+          <label>Nama</label>
+          <input type="Username" name="Nama" id="Nama">
         </div>
         <div class="field">
-          <label>Nama Ruangan</label>
-          <input type="Username" name="NamaRuangan" id="NamaRuangan">
+          <label>Jenis Kelamin</label>
+          <select name="JenisKelamin">
+            <option value="L">Laki-laki</option>
+            <option value="P">Perempuan</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="Password" name="Password" id="Password">
         </div>
       </div>
 
@@ -75,10 +81,19 @@
       <span ><%= messages.pesan %> </span>
     </div>
       <% } %>
-    <div class="ui left icon input" style="margin-top: 5px;margin-bottom: 5px">
-      <input type="text" id="searchStudent" placeholder="Search users...">
-      <i class="users icon"></i>
+    <div class="ui grid">
+      <div class="twelve wide column" style="margin-top: 5px;margin-bottom: 5px;width: 100%">
+        <button class="ui blue button" id="buttonTambahSiswa">Tambah Siswa</button>
+      </div>
+     <div class="one wide column">
+       <div class=" ui left icon input" style="margin-top: 5px;margin-bottom: 5px">
+         <input type="text" id="searchStudent" placeholder="Search users...">
+         <i class="users icon"></i>
+       </div>
+     </div>
     </div>
+
+
 
     
     <div id="containermac" name="containermac" class="ui form">
@@ -194,6 +209,9 @@
                     }
                 }
             );
+        });
+        $("#buttonTambahSiswa").click(function () {
+            $('#insertDataSiswaModal').modal('show');
         });
     });
 

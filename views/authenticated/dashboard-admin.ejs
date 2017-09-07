@@ -128,6 +128,7 @@
         let jamawal ;
         let jamakhir ;
         let deviceid;
+        let macArray;
         let deviceidawal;
         $('#TanggalMulai').calendar({
             type: 'date',
@@ -192,7 +193,7 @@
                 loaddataawal();
                 frag.appendChild(select);
                 div.appendChild(frag);
-                //div.onchange=onclick_search;
+                div.onchange=onclick_search;
             });
 
         }
@@ -200,7 +201,7 @@
         function loaddataawal() {
             $.post('/absensi/list/absen/by/mac',{ MacID: deviceidawal},
                 function(data) {
-                    console.log(data)
+
                     LoadTabelJadwal(data.list)
                 }
             );
@@ -214,9 +215,9 @@
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "No";
             tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "Mac Scanner";
+            td.innerHTML = "Scanner";
             tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "RFID";
+            td.innerHTML = "Pengguna";
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "Date";
             tr.appendChild(td = document.createElement("td"));
@@ -235,9 +236,14 @@
                     tr.appendChild(td = document.createElement("td"));
                     td.innerHTML =count;
                     tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[j].mac;
-                    tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[j].rf_id;
+                    td.innerHTML =Data[j].macDetail.namaruangan;
+                    if(!Data[j].detailUser){
+                        tr.appendChild(td = document.createElement("td"));
+                        td.innerHTML =Data[j].rf_id;
+                    }else {
+                        tr.appendChild(td = document.createElement("td"));
+                        td.innerHTML =Data[j].detailUser.nama;
+                    }
                     tr.appendChild(td = document.createElement("td"));
                     td.innerHTML =Data[j].tanggal;
                     tr.appendChild(td = document.createElement("td"));
@@ -253,7 +259,7 @@
             var e = document.getElementById("selectcontainer");
             var deviceid = e.options[e.selectedIndex].value;
             if(tanggal==null||jamawal==null||jamakhir==null){
-                $.post('/absensi/list/absen/by/mac',{ MacID: deviceidawal},
+                $.post('/absensi/list/absen/by/mac',{ MacID: deviceid},
                     function(data) {
                         LoadTabelJadwal(data.list)
                     }

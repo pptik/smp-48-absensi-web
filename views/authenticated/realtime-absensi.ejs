@@ -77,6 +77,7 @@
         function loaddataawal() {
             $.get('/absensi/today/list',{},
                 function(data) {
+                console.log(data);
                     LoadTabelJadwal(data.listmac)
                 }
             );
@@ -91,14 +92,14 @@
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "No";
             tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "Mac Scanner";
+            td.innerHTML = "Scanner";
             tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "RFID";
+            td.innerHTML = "Pengguna";
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "Date";
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "Time";
-
+            var count=1;
             if(Data.length>0){
 
                 for (var j=0;j<Data.length;j++){
@@ -108,13 +109,18 @@
                     {
                         tr.setAttribute("style", "background:white");
                     }
-                    table.prepend(tr);
+                    table.appendChild(tr);
                     tr.appendChild(td = document.createElement("td"));
                     td.innerHTML =count;
                     tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[j].mac;
-                    tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[j].rf_id;
+                    td.innerHTML =Data[j].macDetail.namaruangan;
+                    if(!Data[j].detailUser){
+                        tr.appendChild(td = document.createElement("td"));
+                        td.innerHTML =Data[j].rf_id;
+                    }else {
+                        tr.appendChild(td = document.createElement("td"));
+                        td.innerHTML =Data[j].detailUser.nama;
+                    }
                     tr.appendChild(td = document.createElement("td"));
                     td.innerHTML =Data[j].tanggal;
                     tr.appendChild(td = document.createElement("td"));

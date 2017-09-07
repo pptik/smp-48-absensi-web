@@ -119,6 +119,7 @@
         let jamakhir ;
         let deviceid;
         let deviceidawal;
+        let macArray;
         $('#TanggalMulai').calendar({
             type: 'date',
             onChange: function (date, text) {
@@ -176,6 +177,7 @@
              $.get('/absensi/list/mac', function(data) {
                 let listmac=data.listmac;
                 deviceidawal=listmac[0].mac;
+                macArray=data.listmac;
                 for(i=0 ; i<listmac.length ; i++){
                     select.options.add( new Option(listmac[i].koderuangan,listmac[i].mac) );
                 }
@@ -190,7 +192,6 @@
         function loaddataawal() {
             $.post('/absensi/list/absen/by/mac',{ MacID: deviceidawal},
                 function(data) {
-                    console.log(data)
                     LoadTabelJadwal(data.list)
                 }
             );
@@ -204,7 +205,7 @@
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "No";
             tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "Mac Scanner";
+            td.innerHTML = "Scanner";
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "RFID";
             tr.appendChild(td = document.createElement("td"));

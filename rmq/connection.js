@@ -1,7 +1,6 @@
 const rmq_config = require('../setup/rmq.json');
 const configs=require('../setup/configs.json');
 let rmq = require('amqplib');
-const absensiService = require('./absensi');
 let request = require('request');
 
 
@@ -26,21 +25,24 @@ consume = async (connection) => {
         channel.consume(q.queue, (msg) => {
             console.log("=================================================");
             console.log("Incoming msg : "+msg.content.toString());
-            /** update angkot location**/
             console.log(msg.fields.routingKey)
             if(msg.fields.routingKey === rmq_config.route_update_absensi){
-                let query = JSON.parse(msg.content.toString());
-                console.log("-------------------------------------------------");
-                console.log('Insert Absensi');
-                console.log("-------------------------------------------------");
-                request({
-                    url: configs.URL_SERVICE+'absensi/insert',
-                    method: "POST",
-                    json: true,
-                    body: query
-                }, function (error, response, body){
-                    console.log(body);
-                });
+               try {
+                   let query = JSON.parse(msg.content.toString());
+                   console.log("-------------------------------------------------");
+                   console.log('Insert Absensi');
+                   console.log("-------------------------------------------------");
+                   request({
+                       url: configs.URL_SERVICE+'absensi/insert',
+                       method: "POST",
+                       json: true,
+                       body: query
+                   }, function (error, response, body){
+                       console.log(body);
+                   });
+               }catch (err){
+                   console.log(err);
+               }
             }
         }, {noAck: true});
         console.log("Service consume on : "+rmq_config.service_route);

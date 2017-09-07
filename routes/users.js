@@ -73,6 +73,24 @@ router.get('/list/siswa', async(req, res) => {
         res.status(200).send({success: false, message: "Data Gagal Diambil"});
     }
 });
+router.post('/insert/siswa', async(req, res) => {
+    let query=req.body;
+    console.log(query);
+    if(query.NoInduk===undefined||query.Nama===undefined||query.JenisKelamin===undefined||query.Password===undefined){
+        req.flash('pesan', "Gagal Menambah Data");
+        res.redirect('/authenticated-data-siswa');
+    }else {
+        try{
+            await userModel.insertUserSiswa(query);
+            req.flash('pesan', "Berhasil Menambah Data");
+            res.redirect('/authenticated-data-siswa');
+        }catch (err){
+            console.log(err);
+            req.flash('pesan', "Gagal Menambah Data");
+            res.redirect('/authenticated-data-siswa');
+        }
+    }
+});
 router.post('/search/siswa', async(req, res) => {
     console.log(req.body);
     try{

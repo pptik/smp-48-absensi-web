@@ -115,6 +115,7 @@
         let jamawal ;
         let jamakhir ;
         let deviceid;
+        let macArray;
         let deviceidawal;
         $('#TanggalMulai').calendar({
             type: 'date',
@@ -170,16 +171,16 @@
             select.className="ui fluid search dropdown";
             select.setAttribute("id", "selectcontainer");
 
-             $.get('/absensi/list/mac', function(data) {
+            $.get('/absensi/list/mac', function(data) {
                 let listmac=data.listmac;
                 deviceidawal=listmac[0].mac;
                 for(i=0 ; i<listmac.length ; i++){
                     select.options.add( new Option(listmac[i].koderuangan,listmac[i].mac) );
                 }
-                 loaddataawal();
-                 frag.appendChild(select);
-                 div.appendChild(frag);
-                 //div.onchange=onclick_search;
+                loaddataawal();
+                frag.appendChild(select);
+                div.appendChild(frag);
+                div.onchange=onclick_search;
             });
 
         }
@@ -187,7 +188,7 @@
         function loaddataawal() {
             $.post('/absensi/list/absen/by/mac',{ MacID: deviceidawal},
                 function(data) {
-                    console.log(data)
+
                     LoadTabelJadwal(data.list)
                 }
             );
@@ -201,9 +202,9 @@
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "No";
             tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "Mac Scanner";
+            td.innerHTML = "Scanner";
             tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "RFID";
+            td.innerHTML = "Pengguna";
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "Date";
             tr.appendChild(td = document.createElement("td"));
@@ -222,9 +223,14 @@
                     tr.appendChild(td = document.createElement("td"));
                     td.innerHTML =count;
                     tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[j].mac;
-                    tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[j].rf_id;
+                    td.innerHTML =Data[j].macDetail.namaruangan;
+                    if(!Data[j].detailUser){
+                        tr.appendChild(td = document.createElement("td"));
+                        td.innerHTML =Data[j].rf_id;
+                    }else {
+                        tr.appendChild(td = document.createElement("td"));
+                        td.innerHTML =Data[j].detailUser.nama;
+                    }
                     tr.appendChild(td = document.createElement("td"));
                     td.innerHTML =Data[j].tanggal;
                     tr.appendChild(td = document.createElement("td"));
@@ -237,14 +243,14 @@
 
         function onclick_search() {
 
-            var e = document.getElementById("selectcontainer");
-            var deviceid = e.options[e.selectedIndex].value;
+            let e = document.getElementById("selectcontainer");
+            let deviceid = e.options[e.selectedIndex].value;
             if(tanggal==null||jamawal==null||jamakhir==null){
-                $.post('/absensi/list/absen/by/mac',{ MacID: deviceidawal},
+                $.post('/absensi/list/absen/by/mac',{ MacID: deviceid},
                     function(data) {
                         LoadTabelJadwal(data.list)
                     }
-            );
+                );
             }else{
                 var starttime=new Date(tanggal+" "+jamawal).toISOString();
                 var endtime=new Date(tanggal+" "+jamakhir).toISOString();
@@ -254,7 +260,7 @@
                         LoadTabelJadwal(data.list)
 
                     }
-            );
+                );
             }
 
 
