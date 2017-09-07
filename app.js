@@ -28,7 +28,7 @@ app.use(session({
     secret: "absensiSMP48",
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: !true }
+    cookie: { secure: true }
 }));
 
 
