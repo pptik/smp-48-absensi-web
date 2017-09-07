@@ -88,9 +88,9 @@
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "No";
             tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "Mac Scanner";
+            td.innerHTML = "Scanner";
             tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "RFID";
+            td.innerHTML = "Pengguna";
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML = "Date";
             tr.appendChild(td = document.createElement("td"));
@@ -105,13 +105,18 @@
                     {
                         tr.setAttribute("style", "background:white");
                     }
-                    table.prepend(tr);
+                    table.appendChild(tr);
                     tr.appendChild(td = document.createElement("td"));
                     td.innerHTML =count;
                     tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[j].mac;
-                    tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[j].rf_id;
+                    td.innerHTML =Data[j].macDetail.namaruangan;
+                    if(!Data[j].detailUser){
+                        tr.appendChild(td = document.createElement("td"));
+                        td.innerHTML =Data[j].rf_id;
+                    }else {
+                        tr.appendChild(td = document.createElement("td"));
+                        td.innerHTML =Data[j].detailUser.nama;
+                    }
                     tr.appendChild(td = document.createElement("td"));
                     td.innerHTML =Data[j].tanggal;
                     tr.appendChild(td = document.createElement("td"));
@@ -128,9 +133,14 @@
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML =count;
             tr.appendChild(td = document.createElement("td"));
-            td.innerHTML =Data.mac;
-            tr.appendChild(td = document.createElement("td"));
-            td.innerHTML =Data.rf_id;
+            td.innerHTML =Data.macDetail.namaruangan;
+            if(!Data.detailUser){
+                tr.appendChild(td = document.createElement("td"));
+                td.innerHTML =Data.rf_id;
+            }else {
+                tr.appendChild(td = document.createElement("td"));
+                td.innerHTML =Data.detailUser.nama;
+            }
             tr.appendChild(td = document.createElement("td"));
             td.innerHTML =Data.tanggal;
             tr.appendChild(td = document.createElement("td"));

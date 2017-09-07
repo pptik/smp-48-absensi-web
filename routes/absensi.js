@@ -47,11 +47,15 @@ router.post('/insert', async(req, res) => {
             query.waktu=today.format("HH:mm:ss");
             if(MacInCollection.length>0){
                 await absensiModel.insertAbsensi(query);
+                query.macDetail=await absensiModel.promiseGetDetailMacID(query.mac);
+                query.detailUser=await absensiModel.promiseGetDetailUser(query.rf_id);
                 req.app.io.emit('absensi', query);
                     res.status(200).send({success: true, message: "Data Berhasil Dikirim"});
             }else {
                 await absensiModel.insertToListMac(query.mac);
                 await absensiModel.insertAbsensi(query);
+                query.macDetail=await absensiModel.promiseGetDetailMacID(query.mac);
+                query.detailUser=await absensiModel.promiseGetDetailUser(query.rf_id);
                 req.app.io.emit('absensi', query);
                 res.status(200).send({success: true, message: "Data Berhasil Dikirim"});
             }

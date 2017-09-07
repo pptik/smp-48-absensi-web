@@ -15,7 +15,6 @@ insertToListMac = (MacID) => {
 };
 insertAbsensi = (query) => {
     return new Promise((resolve, reject)=>{
-
         database.collection(query.mac).insertOne(query, (err, result) => {
             if(err) reject(err);
             else resolve(result);
@@ -132,6 +131,14 @@ function getDetailMacID(MacID,callback) {
        else callback(null,result);
     });
 }
+promiseGetDetailMacID=(MacID)=>{
+    return new Promise((resolve,reject)=>{
+        macCollection.findOne({mac:MacID},function (err,result) {
+            if(err)reject(err);
+            else resolve(result);
+        });
+    }) ;
+};
 function getDetailUser(rf_id,callback) {
     usersCollection.findOne({rf_id:rf_id},function (err,result) {
        if(err)callback(err,null);
@@ -141,7 +148,17 @@ function getDetailUser(rf_id,callback) {
        }
     });
 }
-
+promiseGetDetailUser=(rf_id)=>{
+    return new Promise((resolve,reject)=>{
+        usersCollection.findOne({rf_id:rf_id},function (err,result) {
+            if(err)reject(err);
+            else {
+                if(result)resolve(result);
+                else resolve(false);
+            }
+        });
+    }) ;
+};
 function iterateMultipleAbsenList(items, callback) {
     let arrAbsen=[];
     let maxCount = (items.length > 0) ? items.length-1 : 0;
@@ -218,5 +235,7 @@ module.exports = {
     insertAbsensi:insertAbsensi,
     getListAbsenToday:getListAbsenToday,
     updateDataMacList:updateDataMacList,
-    deleteMacFromMacListDocument:deleteMacFromMacListDocument
+    deleteMacFromMacListDocument:deleteMacFromMacListDocument,
+    promiseGetDetailUser:promiseGetDetailUser,
+    promiseGetDetailMacID:promiseGetDetailMacID
 };
