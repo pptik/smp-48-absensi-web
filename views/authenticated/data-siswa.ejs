@@ -18,6 +18,40 @@
 <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
 
 <meta charset="utf-8">
+<div class="ui modal small" id="editDataSiswa" style="width: 50% ">
+  <i class="close icon"></i>
+  <div class="header">
+    Edit Data Siswa
+  </div>
+  <div class="editDataSiswaModalBody" style="margin: 7px">
+    <form class="ui form" method="post" action="/users/edit/siswa">
+      <input type="hidden" name="_idEdit" id="_idEdit"/>
+      <div class="ui grid">
+        <div class="four wide column">
+          <div class="field">
+            <label>Nomor Induk</label>
+            <input type="Username" name="NoIndukEdit" id="NoIndukEdit">
+          </div>
+          <div class="field">
+            <label>Nama</label>
+            <input type="Username" name="NamaEdit" id="NamaEdit">
+          </div>
+          <div class="field">
+            <label>Jenis Kelamin</label>
+            <select name="JenisKelaminEdit" id="JenisKelaminEdit">
+              <option value="L">Laki-laki</option>
+              <option value="P">Perempuan</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <br>
+        <input type="submit" value="Submit" class="ui button blue">
+      </div>
+    </form>
+  </div>
+</div>
 <div class="ui modal small" id="insertDataSiswaModal" style="width: 50% ">
   <i class="close icon"></i>
   <div class="header">
@@ -25,38 +59,36 @@
   </div>
   <div class="insertDataSiswaModalBody" style="margin: 7px">
     <form class="ui form" method="post" action="/users/insert/siswa">
-    <div class="ui grid">
-      <div class="four wide column">
-        <div class="field">
-          <label>Nomor Induk</label>
-          <input type="Username" name="NoInduk" id="NoInduk">
+      <div class="ui grid">
+        <div class="four wide column">
+          <div class="field">
+            <label>Nomor Induk</label>
+            <input type="Username" name="NoInduk" id="NoInduk">
+          </div>
+          <div class="field">
+            <label>Nama</label>
+            <input type="Username" name="Nama" id="Nama">
+          </div>
+          <div class="field">
+            <label>Jenis Kelamin</label>
+            <select name="JenisKelamin">
+              <option value="L">Laki-laki</option>
+              <option value="P">Perempuan</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="Password" name="Password" id="Password">
+          </div>
         </div>
-        <div class="field">
-          <label>Nama</label>
-          <input type="Username" name="Nama" id="Nama">
-        </div>
-        <div class="field">
-          <label>Jenis Kelamin</label>
-          <select name="JenisKelamin">
-            <option value="L">Laki-laki</option>
-            <option value="P">Perempuan</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Password</label>
-          <input type="Password" name="Password" id="Password">
-        </div>
-      </div>
 
-    </div>
+      </div>
       <div class="field">
         <br>
         <input type="submit" value="Submit" class="ui button blue">
       </div>
     </form>
   </div>
-
-
 </div>
 <div class="ui modal small" id="tambahRFIDSiswaForm" style="width: 50% ">
   <i class="close icon"></i>
@@ -65,26 +97,26 @@
   </div>
   <div class="tambahRFIDSiswaFormModalBody" style="margin: 7px">
     <form class="ui form" method="post" action="/users/insert/rfid">
-    <div class="ui grid">
-      <input type="hidden" name="_id" id="_id"/>
-      <div class="ui container">
-        <br>
-        <br>
-        <label style="color: #1a69a4">Nama Siswa</label>
-        <h4 id="NamaUserLabel"></h4>
-        <label style="color: #1a69a4" >Nomor Induk Siswa</label>
-        <h4 id="NoIndukLabel"></h4>
-        <div id="containermac" name="containermac" class="ui form">
-          <h3 style="color: #1a69a4">Pilih Device, Lalu Tap Kartu Yang ingin ditambahkan ke User</h3>
-        </div>
-        <div class="field">
+      <div class="ui grid">
+        <input type="hidden" name="_id" id="_id"/>
+        <div class="ui container">
           <br>
-          <h3 style="color: #1a69a4">RFID</h3>
-          <input type="Username" name="RFID" id="RFID" readonly>
+          <br>
+          <label style="color: #1a69a4">Nama Siswa</label>
+          <h4 id="NamaUserLabel"></h4>
+          <label style="color: #1a69a4" >Nomor Induk Siswa</label>
+          <h4 id="NoIndukLabel"></h4>
+          <div id="containermac" name="containermac" class="ui form">
+            <h3 style="color: #1a69a4">Pilih Device, Lalu Tap Kartu Yang ingin ditambahkan ke User</h3>
+          </div>
+          <div class="field">
+            <br>
+            <h3 style="color: #1a69a4">RFID</h3>
+            <input type="Username" name="RFID" id="RFID" readonly>
+          </div>
         </div>
-      </div>
 
-    </div>
+      </div>
       <div class="field">
         <br>
         <br>
@@ -94,6 +126,30 @@
   </div>
 
 
+</div>
+<div class="ui modal small" id="deleteDataForm" style="width: 30% ">
+  <i class="close icon"></i>
+  <div class="header">
+    Delete Data
+  </div>
+  <div class="deleteDataFormBody" style="margin: 7px " >
+    <form class="ui form" method="post" action="/users/delete-user">
+      <input type="hidden" name="_idDelete" id="_idDelete"/>
+      <div class="ui grid">
+        <div class="ten wide column">
+          <div class="field">
+            <label >Masukkan Password Admin</label>
+            <input type="Password" name="PasswordAdmin" id="PasswordAdmin">
+          </div>
+        </div>
+
+      </div>
+      <div class="field">
+        <br>
+        <input type="submit" value="Submit" class="ui button blue">
+      </div>
+    </form>
+  </div>
 </div>
 <div class="ui container" style="width: 100% ;height: 100%;padding-left:5%;padding-right: 5% ">
   <div class="ui secondary pointing menu" style="padding: 5px" >
@@ -123,184 +179,210 @@
       <div class="twelve wide column" style="margin-top: 5px;margin-bottom: 5px;width: 100%">
         <button class="ui blue button" id="buttonTambahSiswa">Tambah Siswa</button>
       </div>
-     <div class="one wide column">
-       <div class=" ui left icon input" style="margin-top: 5px;margin-bottom: 5px">
-         <input type="text" id="searchStudent" placeholder="Search users...">
-         <i class="users icon"></i>
-       </div>
-     </div>
+      <div class="one wide column">
+        <div class=" ui left icon input" style="margin-top: 5px;margin-bottom: 5px">
+          <input type="text" id="searchStudent" placeholder="Search users...">
+          <i class="users icon"></i>
+        </div>
+      </div>
     </div>
 
 
 
-    
+
     <div id="containermac" name="containermac" class="ui form">
 
-    <table class="ui celled padded table" id="TabelSiswa">
+      <table class="ui celled padded table" id="TabelSiswa">
 
-    </table>
+      </table>
+    </div>
+
   </div>
-
 </div>
 
+  <script type="text/javascript">
+      $(document).ready(function(){
+          let socket = io( "<%=URL_Service%>" );
+          socket.on('absensi', function(msg){
+              console.log(msg);
+              loadRFIDFromMessage(msg);
+          });
+          function loadRFIDFromMessage(msg) {
+              console.log(msg);
+              var e = document.getElementById("selectcontainer");
+              var deviceid = e.options[e.selectedIndex].value;
+              if(deviceid===msg.mac){
+                  $(".tambahRFIDSiswaFormModalBody #RFID").val(msg.rf_id);
+              }
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        let socket = io( "<%=URL_Service%>" );
-        socket.on('absensi', function(msg){
-            console.log(msg);
-            loadRFIDFromMessage(msg);
-        });
-        function loadRFIDFromMessage(msg) {
-            console.log(msg);
-            var e = document.getElementById("selectcontainer");
-            var deviceid = e.options[e.selectedIndex].value;
-            if(deviceid===msg.mac){
-                $(".tambahRFIDSiswaFormModalBody #RFID").val(msg.rf_id);
-            }
+          }
+          function loadDataMac() {
+              $.get('/users/list/siswa', function(data) {
+                  let listsiswa=data.listsiswa;
+                  console.log(listsiswa);
+                  LoadTabelSiswa(listsiswa,0);
+              });
+          }
+          loadDataMac()
+          function LoadTabelSiswa(Data,x) {
+              $("#TabelSiswa tr").remove();
+              var table = document.getElementById("TabelSiswa");
+              var thead, tr, td;
+              table.appendChild(thead = document.createElement("thead"));
+              thead.appendChild(tr = document.createElement("tr"));
+              tr.appendChild(td = document.createElement("td"));
+              td.innerHTML = "No";
+              tr.appendChild(td = document.createElement("td"));
+              td.innerHTML = "No Induk";
+              tr.appendChild(td = document.createElement("td"));
+              td.innerHTML = "Nama";
+              tr.appendChild(td = document.createElement("td"));
+              td.innerHTML = "Jenis Kelamin";
+              tr.appendChild(td = document.createElement("td"));
+              td.innerHTML = "RF_ID";
+              tr.appendChild(td = document.createElement("td"));
+              td.innerHTML = "Aksi";
+              let count=1;
+              let btn=new Array();
+              let editBtn=new Array();
+              let editProfileBtn=new Array();
+              if(Data.length>0){
 
-        }
-        function loadDataMac() {
-            $.get('/users/list/siswa', function(data) {
-                let listsiswa=data.listsiswa;
-                console.log(listsiswa);
-                LoadTabelSiswa(listsiswa,0);
-            });
-        }
-        loadDataMac()
-        function LoadTabelSiswa(Data,x) {
-            $("#TabelSiswa tr").remove();
-            var table = document.getElementById("TabelSiswa");
-            var thead, tr, td;
-            table.appendChild(thead = document.createElement("thead"));
-            thead.appendChild(tr = document.createElement("tr"));
-            tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "No";
-            tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "No Induk";
-            tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "Nama";
-            tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "Jenis Kelamin";
-            tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "RF_ID";
-            tr.appendChild(td = document.createElement("td"));
-            td.innerHTML = "Aksi";
-            var count=1;
-            var btn=new Array();
-            var editBtn=new Array();
-            if(Data.length>0){
+                  for (var j=0;j<Data.length;j++){
+                      tr = document.createElement("tr");
+                      tr.setAttribute("id", "row" + j);
+                      if (j%2 == 0)
+                      {
+                          tr.setAttribute("style", "background:white");
+                      }
+                      table.appendChild(tr);
+                      tr.appendChild(td = document.createElement("td"));
+                      td.innerHTML =count;
+                      tr.appendChild(td = document.createElement("td"));
+                      td.innerHTML =Data[j].no_induk;
+                      tr.appendChild(td = document.createElement("td"));
+                      td.innerHTML =Data[j].nama;
+                      tr.appendChild(td = document.createElement("td"));
+                      td.innerHTML =Data[j].jenis_kelamin;
+                      tr.appendChild(td = document.createElement("td"));
+                      if(Data[j].rf_id!==undefined){
+                          let rfidArray=Data[j].rf_id;
+                          let rfidName=""
+                          for (let h=0;h<rfidArray.length;h++){
+                              if(h===rfidArray.length-1){
+                                  rfidName=rfidName+rfidArray[h]+".";
+                              }else {
+                                  rfidName=rfidName+rfidArray[h]+"; ";
+                              }
+                          }
+                          td.innerHTML =rfidName;
+                      }else {
+                          td.innerHTML ="";
+                      }
 
-                for (var j=0;j<Data.length;j++){
-                    tr = document.createElement("tr");
-                    tr.setAttribute("id", "row" + j);
-                    if (j%2 == 0)
-                    {
-                        tr.setAttribute("style", "background:white");
-                    }
-                    table.appendChild(tr);
-                    tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =count;
-                    tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[j].no_induk;
-                    tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[j].nama;
-                    tr.appendChild(td = document.createElement("td"));
-                    td.innerHTML =Data[j].jenis_kelamin;
-                    tr.appendChild(td = document.createElement("td"));
-                    if(Data[j].rf_id!==undefined){
-                        let rfidArray=Data[j].rf_id;
-                        let rfidName=""
-                        for (let h=0;h<rfidArray.length;h++){
-                            if(h===rfidArray.length-1){
-                                rfidName=rfidName+rfidArray[h]+".";
-                            }else {
-                                rfidName=rfidName+rfidArray[h]+"; ";
-                            }
-                        }
-                        td.innerHTML =rfidName;
-                    }else {
-                        td.innerHTML ="";
-                    }
+                      tr.appendChild(td = document.createElement("td"));
+                      btn[j] = document.createElement('input');
+                      btn[j].type = "button";
+                      btn[j].id = "button"+j;
+                      btn[j].name = "button"+j;
+                      btn[j].className = "ui red button";
+                      btn[j].value = "delete";
+                      btn[j].nama=Data[j].Nama;
+                      btn[j].data=Data[j];
+                      td.appendChild(btn[j]);
+                      $("#button"+j+"").click(function () {
+                          deleteFormOpen($(this).prop("data"));
 
-                    tr.appendChild(td = document.createElement("td"));
-                    btn[j] = document.createElement('input');
-                    btn[j].type = "button";
-                    btn[j].id = "button"+j;
-                    btn[j].name = "button"+j;
-                    btn[j].className = "ui red button";
-                    btn[j].value = "delete";
-                    btn[j].nama=Data[j].Nama;
-                    btn[j]._id=Data[j]._id;
-                    td.appendChild(btn[j]);
-                    $("#button"+j+"").click(function () {
+                      });
+                      tr.appendChild(td = document.createElement("td"));
+                      editBtn[j] = document.createElement('input');
+                      editBtn[j].type = "button";
+                      editBtn[j].id = "ebutton"+j;
+                      editBtn[j].name = "ebutton"+j;
+                      editBtn[j].className = "ui blue button";
+                      editBtn[j].value = "RFID";
+                      editBtn[j].nama=Data[j].Nama;
+                      editBtn[j]._id=Data[j]._id;
+                      editBtn[j].data=Data[j] ;
+                      td.appendChild(editBtn[j]);
+                      $("#ebutton"+j+"").click(function () {
+                          tambahRFIDSiswa($(this).prop("data"));
+                      });
+                      tr.appendChild(td = document.createElement("td"));
+                      editProfileBtn[j] = document.createElement('input');
+                      editProfileBtn[j].type = "button";
+                      editProfileBtn[j].id = "eprofilebutton"+j;
+                      editProfileBtn[j].name = "eprofilebutton"+j;
+                      editProfileBtn[j].className = "ui green button";
+                      editProfileBtn[j].value = "Edit Profile";
+                      editProfileBtn[j].nama=Data[j].Nama;
+                      editProfileBtn[j]._id=Data[j]._id;
+                      editProfileBtn[j].data=Data[j] ;
+                      td.appendChild(editProfileBtn[j]);
+                      $("#eprofilebutton"+j+"").click(function () {
+                          editFormOpen($(this).prop("data"));
+                      });
+                      count++;
+                  }
+              }
+          }
+          function editFormOpen(data) {
+              $(".editDataSiswaModalBody #_idEdit").val(data._id);
+              $(".editDataSiswaModalBody #NoIndukEdit").val(data.no_induk);
+              $(".editDataSiswaModalBody #NamaEdit").val(data.nama);
+              $("#JenisKelaminEdit").val(data.jenis_kelamin).change();
+              $('#editDataSiswa').modal('show');
+          }
+          function deleteFormOpen(data) {
+              $(".deleteDataFormBody #_idDelete").val(data._id);
+              $('#deleteDataForm').modal('show');
+          }
+          function tambahRFIDSiswa(data) {
+              $(".tambahRFIDSiswaFormModalBody #_id").val(data._id);
+              $(".tambahRFIDSiswaFormModalBody #NamaUserLabel").text(data.nama);
+              $(".tambahRFIDSiswaFormModalBody #NoIndukLabel").text(data.no_induk);
+              $('#tambahRFIDSiswaForm').modal('show');
+          }
+          function loaddropdownmac() {
+              let div = document.querySelector("#containermac"),
+                  frag = document.createDocumentFragment(),
+                  select = document.createElement("select");
+              select.className="ui fluid search dropdown";
+              select.setAttribute("id", "selectcontainer");
 
+              $.get('/absensi/list/mac', function(data) {
+                  let listmac=data.listmac;
+                  deviceidawal=listmac[0].mac;
+                  for(i=0 ; i<listmac.length ; i++){
+                      select.options.add( new Option(listmac[i].koderuangan,listmac[i].mac) );
+                  }
+                  frag.appendChild(select);
+                  div.appendChild(frag);
+                  //div.onchange=onclick_search;
+              });
 
-                    });
-                    tr.appendChild(td = document.createElement("td"));
-                    editBtn[j] = document.createElement('input');
-                    editBtn[j].type = "button";
-                    editBtn[j].id = "ebutton"+j;
-                    editBtn[j].name = "ebutton"+j;
-                    editBtn[j].className = "ui blue button";
-                    editBtn[j].value = "RFID";
-                    editBtn[j].nama=Data[j].Nama;
-                    editBtn[j]._id=Data[j]._id;
-                    editBtn[j].data=Data[j] ;
-                    td.appendChild(editBtn[j]);
-                    $("#ebutton"+j+"").click(function () {
-                        tambahRFIDSiswa($(this).prop("data"));
-                    });
-                    count++;
-                }
-            }
-        }
-        function tambahRFIDSiswa(data) {
-            $(".tambahRFIDSiswaFormModalBody #_id").val(data._id);
-            $(".tambahRFIDSiswaFormModalBody #NamaUserLabel").text(data.nama);
-            $(".tambahRFIDSiswaFormModalBody #NoIndukLabel").text(data.no_induk);
-            $('#tambahRFIDSiswaForm').modal('show');
-        }
-        function loaddropdownmac() {
-            let div = document.querySelector("#containermac"),
-                frag = document.createDocumentFragment(),
-                select = document.createElement("select");
-            select.className="ui fluid search dropdown";
-            select.setAttribute("id", "selectcontainer");
+          }
+          loaddropdownmac();
+          $('#searchStudent').keyup(function() {
+              var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+              console.log(val);
+              $.post('/users/search/siswa',{ SearchString: val},
+                  function(data) {
+                      if(data.success){
+                          console.log(data);
+                          LoadTabelSiswa(data.listsiswa,1);
+                      }else {
 
-            $.get('/absensi/list/mac', function(data) {
-                let listmac=data.listmac;
-                deviceidawal=listmac[0].mac;
-                for(i=0 ; i<listmac.length ; i++){
-                    select.options.add( new Option(listmac[i].koderuangan,listmac[i].mac) );
-                }
-                frag.appendChild(select);
-                div.appendChild(frag);
-                //div.onchange=onclick_search;
-            });
-
-        }
-        loaddropdownmac();
-        $('#searchStudent').keyup(function() {
-            var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-            console.log(val);
-            $.post('/users/search/siswa',{ SearchString: val},
-                function(data) {
-                    if(data.success){
-                        console.log(data);
-                        LoadTabelSiswa(data.listsiswa,1);
-                    }else {
-
-                    }
-                }
-            );
-        });
-        $("#buttonTambahSiswa").click(function () {
-            $('#insertDataSiswaModal').modal('show');
-        });
-    });
+                      }
+                  }
+              );
+          });
+          $("#buttonTambahSiswa").click(function () {
+              $('#insertDataSiswaModal').modal('show');
+          });
+      });
 
 
-</script>
+  </script>
 </body>
 </html>

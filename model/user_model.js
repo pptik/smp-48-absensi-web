@@ -115,6 +115,23 @@ insertUserSiswa = (query) => {
         });
     });
 };
+updateUserSiswa = (query) => {
+    return new Promise((resolve,reject)=>{
+        userCollection.updateOne({_id: ObjectId(query._idEdit)},{ $set:
+            {
+                nama:query.NamaEdit,
+                no_induk:query.NoIndukEdit,
+                jenis_kelamin:query.JenisKelaminEdit
+            }
+        }, function(err, result) {
+            if(err){
+                reject(err);
+            }else {
+                resolve(result);
+            }
+        });
+    });
+};
 checkRFID = (rf_id) => {
     return new Promise((resolve, reject)=>{
         userCollection.findOne({rf_id:rf_id},function (err,result) {
@@ -126,6 +143,14 @@ checkRFID = (rf_id) => {
         });
     });
 };
+deleteUserFromDocument=(UseriD)=>{
+    return new Promise((resolve,reject)=>{
+        userCollection.removeOne({_id:ObjectId(UseriD)},function (err,result) {
+            if(err)reject(err);
+            else resolve(result);
+        });
+    }) ;
+};
 module.exports = {
     updatePasswordAdmin:updatePasswordAdmin,
     checkLoginUser:checkLoginUser,
@@ -134,5 +159,7 @@ module.exports = {
     checkIfAdmin:checkIfAdmin,
     insertUserSiswa:insertUserSiswa,
     checkRFID:checkRFID,
-    updateRfidSiswa:updateRfidSiswa
+    updateRfidSiswa:updateRfidSiswa,
+    deleteUserFromDocument:deleteUserFromDocument,
+    updateUserSiswa:updateUserSiswa
 };
