@@ -66,6 +66,25 @@ router.post('/insert', async(req, res) => {
     }
 
 });
+router.post('/getdetail', async(req, res) => {
+    let query=req.body;
+    if (query.mac===undefined||query.rf_id===undefined)res.status(200).send({success: false, message: "Parameter tidak Lengkap"});
+    else {
+        try{
+            let today=moment(new Date());
+            query.date=new Date(moment().format('YYYY-MM-DD HH:mm:ss'));
+            query.tanggal=today.format("dddd, DD/MM/YYYY",'id');
+            query.waktu=today.format("HH:mm:ss");
+            query.macDetail=await absensiModel.promiseGetDetailMacID(query.mac);
+            query.detailUser=await absensiModel.promiseGetDetailUser(query.rf_id);
+            res.status(200).send({success: true, message: "Data Berhasil Diambil",data:query});
+        }catch (err){
+            console.log(err);
+            res.status(200).send({success: false, message: "Data Gagal Diambil"});
+        }
+    }
+
+});
 router.post('/update-mac', async(req, res) => {
     let query=req.body;
     console.log(query);

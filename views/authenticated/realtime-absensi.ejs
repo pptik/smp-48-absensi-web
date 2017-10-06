@@ -151,7 +151,7 @@
             count++;
         }
         let socket = io( "<%=URL_Service%>" );
-        socket.on('absensi', function(msg){
+        socket.on('<%=Socket_Name%>', function(msg){
             console.log(msg);
             LoadDataFromMassage(msg);
         });

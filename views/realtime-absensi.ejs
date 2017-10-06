@@ -126,6 +126,7 @@
             }
         }
         function LoadDataFromMassage(Data) {
+            console.log(Data);
             var table = document.getElementById("TabelJadwal");
             var tr, td;
             tr = document.createElement("tr");
@@ -148,9 +149,12 @@
             count++;
         }
         let socket = io( "<%=URL_Service%>" );
-        socket.on('absensi', function(msg){
-            console.log(msg);
-            LoadDataFromMassage(msg);
+        socket.on('<%=Socket_Name%>', function(msg){
+            $.post('/absensi/getdetail',{mac:msg.mac,rf_id:msg.rf_id},
+                function(data) {
+                    LoadDataFromMassage(data.data)
+                }
+            );
         });
 
     });
