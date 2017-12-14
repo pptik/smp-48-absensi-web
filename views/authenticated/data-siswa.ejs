@@ -203,7 +203,7 @@
   <script type="text/javascript">
       $(document).ready(function(){
           let socket = io( "<%=URL_Service%>" );
-          socket.on('absensi', function(msg){
+          socket.on('absensismp48socket', function(msg){
               console.log(msg);
               loadRFIDFromMessage(msg);
           });

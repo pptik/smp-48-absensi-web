@@ -1,0 +1,22 @@
+Connected to server
+[0mGET /robots.txt [33m404 [0m19.703 ms - 1901[0m
+Service consume on : absensi.*
+[0mGET /robots.txt [33m404 [0m1.538 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.996 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.808 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m1.053 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.868 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.808 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.809 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.805 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.809 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.803 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.841 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.844 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.875 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.840 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.820 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.895 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.905 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m1.799 ms - 1901[0m
+[0mGET /authenticated-alat-setting [32m200 [0m17.520 ms - 7495[0m

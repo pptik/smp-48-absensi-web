@@ -1,0 +1,20 @@
+Connected to server
+[0mGET /robots.txt [33m404 [0m18.392 ms - 1901[0m
+Service consume on : absensi.*
+[0mGET /robots.txt [33m404 [0m1.705 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m1.276 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.842 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.812 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.802 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.838 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.919 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.829 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.800 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.804 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.801 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m1.103 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.940 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m2.227 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m2.252 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m1.973 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m1.581 ms - 1901[0m

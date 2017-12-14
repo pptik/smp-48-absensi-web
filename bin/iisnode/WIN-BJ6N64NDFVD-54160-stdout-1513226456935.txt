@@ -1,0 +1,4 @@
+Connected to server
+[0mGET /robots.txt [33m404 [0m23.833 ms - 1901[0m
+[0mGET /absensi/list/mac [32m200 [0m35.239 ms - 422[0m
+Service consume on : absensi.*

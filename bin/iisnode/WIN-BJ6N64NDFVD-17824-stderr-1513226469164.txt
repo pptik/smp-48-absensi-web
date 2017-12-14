@@ -1,0 +1,323 @@
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)
+Error: Not Found
+    at E:\Hosting\smp-48-absensi-web\app.js:124:23
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:635:15
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:260:14)
+    at Function.handle (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:317:13)
+    at E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\Hosting\smp-48-absensi-web\node_modules\express\lib\router\layer.js:91:12)

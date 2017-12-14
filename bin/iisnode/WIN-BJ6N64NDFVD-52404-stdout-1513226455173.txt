@@ -1,0 +1,3 @@
+Connected to server
+[0mGET /authenticated-alat-setting [32m200 [0m32.466 ms - 7595[0m
+Service consume on : absensi.*

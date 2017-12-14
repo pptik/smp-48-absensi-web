@@ -1,0 +1,27 @@
+Connected to server
+[0mGET /assets/images/absensi.png [32m200 [0m35.777 ms - 4638[0m
+[0mGET /robots.txt [33m404 [0m17.547 ms - 1901[0m
+Service consume on : absensi.*
+[0mGET /robots.txt [33m404 [0m1.298 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.831 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.857 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.803 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.790 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m1.036 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.802 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.852 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.786 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.797 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.784 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.800 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m1.038 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.836 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.790 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.830 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m0.789 ms - 1901[0m
+[0mGET /robots.txt [33m404 [0m3.119 ms - 1901[0m
+{ _id: '5a3200c536b234ac18c81f24',
+  MacID: '5c:cf:7f:f0:89:8f',
+  KodeRuangan: '16',
+  NamaRuangan: '16' }
+[0mPOST /absensi/update-mac [36m302 [0m41.735 ms - 98[0m

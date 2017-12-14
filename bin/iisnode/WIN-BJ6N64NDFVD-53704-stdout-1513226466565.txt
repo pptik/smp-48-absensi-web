@@ -1,0 +1,5 @@
+Connected to server
+[0mGET /assets/images/absensi.png [32m200 [0m42.303 ms - 4638[0m
+[0mGET /robots.txt [33m404 [0m22.461 ms - 1901[0m
+Service consume on : absensi.*
+[0mGET /absensi/list/mac [36m304 [0m42.948 ms - -[0m

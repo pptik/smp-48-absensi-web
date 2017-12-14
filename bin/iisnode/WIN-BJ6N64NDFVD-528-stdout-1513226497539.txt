@@ -1,0 +1,4 @@
+Connected to server
+[0mGET /robots.txt [33m404 [0m18.387 ms - 1901[0m
+Service consume on : absensi.*
+[0mGET /absensi/today/list [32m200 [0m92.491 ms - 714[0m

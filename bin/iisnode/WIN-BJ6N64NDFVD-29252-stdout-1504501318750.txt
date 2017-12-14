@@ -1,3 +1,0 @@
-Connected to server
-a user connected
-Service consume on : absensi.service.*
