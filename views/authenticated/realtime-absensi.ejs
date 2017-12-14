@@ -152,8 +152,11 @@
         }
         let socket = io( "<%=URL_Service%>" );
         socket.on('<%=Socket_Name%>', function(msg){
-            console.log(msg);
-            LoadDataFromMassage(msg);
+            $.post('/absensi/getdetail',{mac:msg.mac,rf_id:msg.rf_id},
+                function(data) {
+                    LoadDataFromMassage(data.data)
+                }
+            );
         });
 
     });
